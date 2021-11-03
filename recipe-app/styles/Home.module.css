@@ -1,7 +1,16 @@
-.main {
-    background-color: aquamarine
+.footer {
+    text-align: center;
 }
 
-.footer {
-    background-color: aqua;
+.main section {
+    width: fit-content;
+    display: inline-block;
+}
+.main ul,
+.main li {
+    width: fit-content;
+}
+
+.container {
+    text-align: center;
 }

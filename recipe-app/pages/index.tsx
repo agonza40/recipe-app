@@ -1,3 +1,4 @@
+import { PrimaryButton } from '@fluentui/react';
 import Link from 'next/link';
 import CommonHeader from '../components/common-header';
 import {recipeList} from '../fixtures/recipes';
@@ -9,9 +10,14 @@ export default function Home({allRecipes}) {
       <CommonHeader/>
       <main className={styles.main}>
         <h1>Recipes</h1>
-        <ul>
-          {allRecipes.map(r => <li key={r.id}><Link href={`recipe/${r.id}`}><a>{r.name}</a></Link></li>)}
-        </ul>
+        <section>
+          <ul>
+            {allRecipes.map(r => <li key={r.id}><Link href={`/recipe/${r.id}`}><a>{r.name}</a></Link></li>)}
+          </ul>
+          <div>
+            <Link href="/shopping-list" passHref><PrimaryButton>My Shopping List</PrimaryButton></Link>
+          </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
