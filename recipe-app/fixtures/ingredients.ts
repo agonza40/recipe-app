@@ -10,9 +10,15 @@ const butter = {
     name: 'Butter'
 }
 
+const spaghettiNoodles = {
+    id: 'spaghetti-noodles',
+    name: 'Spaghetti Noodles'
+}
+
 const ingredients: {[index: string]: Ingredient} = {
     [whiteBread.id]: whiteBread,
-    [butter.id]: butter
+    [butter.id]: butter,
+    [spaghettiNoodles.id]: spaghettiNoodles
 };
 
 export default ingredients;

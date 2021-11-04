@@ -1,14 +1,14 @@
-import { IngredientListItem } from "../model/ingredient";
-import Head from "next/head";
-import Link from "next/link";
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../state/store";
-import { Checkbox, IconButton, IIconProps, List, PrimaryButton } from "@fluentui/react";
-import { checkOffItem, removeItem } from "../state/shopping-list";
+import { IngredientListItem } from '../model/ingredient';
+import Head from 'next/head';
+import Link from 'next/link';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../state/store';
+import { Checkbox, IconButton, IIconProps, List, PrimaryButton } from '@fluentui/react';
+import { checkOffItem, removeItem } from '../state/shopping-list';
 import styles from '../styles/Shopping-list.module.css';
-import NavLayout from "../components/nav-layout";
+import NavLayout from '../components/nav-layout';
 
-const deleteIcon: IIconProps = {iconName: 'Delete'}
+const deleteIcon: IIconProps = {iconName: 'Delete'};
 
 export default function ShoppingList () {
     const shoppingListItems = (useSelector as TypedUseSelectorHook<RootState>)((state) => state.shoppingList.ingredientList);
@@ -26,7 +26,7 @@ export default function ShoppingList () {
             iconProps={deleteIcon}
             onClick={() => dispatch(removeItem(item.id))}
         ></IconButton></span>;
-    }
+    };
 
     return (<NavLayout selectedKey="shopping-list">
         <h1>My Shopping List</h1>

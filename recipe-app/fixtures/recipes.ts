@@ -16,8 +16,24 @@ const butteredToast: Recipe = {
     ]
 };
 
+const butteredNoodles: Recipe = {
+    id: 'buttered-noodles',
+    name: 'Buttered Noodles',
+    ingredients: [
+        ingredients['spaghetti-noodles'],
+        ingredients['butter']
+    ],
+    steps: [
+        'Cook noodles to desired doneness',
+        'Melt butter while noodles are cooking',
+        'Put cooked noodles in a bowl',
+        'Spread butter on noodles and stir'
+    ]
+};
+
 export const recipes: {[index: string]: Recipe} = {
-    [butteredToast.id]: butteredToast
+    [butteredToast.id]: butteredToast,
+    [butteredNoodles.id]: butteredNoodles
 };
 
 

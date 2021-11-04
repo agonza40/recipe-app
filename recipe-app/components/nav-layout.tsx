@@ -1,6 +1,6 @@
-import { INavLink, INavLinkGroup, Nav } from "@fluentui/react";
-import { useRouter } from "next/dist/client/router";
-import CommonHeader from "./common-header";
+import { INavLink, INavLinkGroup, Nav } from '@fluentui/react';
+import { useRouter } from 'next/dist/client/router';
+import CommonHeader from './common-header';
 import styles from './nav-layout.module.scss';
 
 export interface INavLayoutProps {
@@ -24,11 +24,11 @@ const navGroups: INavLinkGroup[] = [{
         key: 'recipe-buttered-toast',
         url: '/recipe/buttered-toast',
     }]
-}]
+}];
 
 
 export default function NavLayout ({children, selectedKey}) {
-    const router = useRouter()
+    const router = useRouter();
     const linkClick = (ev: React.MouseEvent<HTMLElement>, link: INavLink) => {
         ev.preventDefault();
         router.push(link.url);

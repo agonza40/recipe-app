@@ -24,7 +24,7 @@ export default function Home({allRecipes}) {
       <p>Recipes are fun!</p>
       </footer>
     </div>
-  )
+  );
 }
 
 export function getStaticProps() {

@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { recipeList } from "../../fixtures/recipes";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { recipeList } from '../../fixtures/recipes';
 
 export default function handler (req: NextApiRequest, res: NextApiResponse) {
     const search = req.query.s;

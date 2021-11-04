@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { IStackTokens, MessageBar, MessageBarType, PrimaryButton, Stack } from "@fluentui/react";
-import { useDispatch } from "react-redux";
-import CommonHeader from "../../components/common-header";
-import { recipeList, recipes } from "../../fixtures/recipes";
-import { Recipe } from "../../model/recipe";
-import { addIngredients } from "../../state/shopping-list";
-import { AppDispatch } from "../../state/store";
-import styles from "../../styles/Recipe.module.css";
+import { IStackTokens, MessageBar, MessageBarType, PrimaryButton, Stack } from '@fluentui/react';
+import { useDispatch } from 'react-redux';
+import CommonHeader from '../../components/common-header';
+import { recipeList, recipes } from '../../fixtures/recipes';
+import { Recipe } from '../../model/recipe';
+import { addIngredients } from '../../state/shopping-list';
+import { AppDispatch } from '../../state/store';
+import styles from '../../styles/Recipe.module.css';
 import NavLayout from '../../components/nav-layout';
 import { useState } from 'react';
 
@@ -55,7 +55,7 @@ export async function getStaticPaths() {
     return {
         paths: recipeList.map(r => {return {params: {id: r.id}};}),
         fallback: false
-    }
+    };
 }
 
 export async function getStaticProps({params}) {

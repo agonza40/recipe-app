@@ -1,7 +1,7 @@
-import { initializeIcons, ThemeProvider } from '@fluentui/react'
-import { Provider } from 'react-redux'
-import store from '../state/store'
-import '../styles/globals.css'
+import { initializeIcons, ThemeProvider } from '@fluentui/react';
+import { Provider } from 'react-redux';
+import store from '../state/store';
+import '../styles/globals.css';
 import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <Component {...pageProps}/>
       </ThemeProvider>
-    </Provider>
+    </Provider>;
 }
 
-export default MyApp
+export default MyApp;
 
 initializeIcons();
 
@@ -37,7 +37,7 @@ export async function getNavItems() {
         name: r.name,
         key: `recipe-${r.id}`,
         url: `/recipe/${r.id}`,
-      }
+      };
     })
-  }]
+  }];
 }
